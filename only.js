@@ -1463,13 +1463,13 @@ async function saveKazna()
 }
   
 
-vk.setOptions({ token: '87b81ea83a72717ccd5536a61af8d626141bee5009b0f62e9ce6047bdfed3be646022134cc1e30e8acc9d', pollingGroupId:202327178 });
+vk.setOptions({ token: '2b4918c44f8fd503258e963a2b5004dd41508e5e3cc27e63ef56b219ab95adcefe5bca5812e73d39086fd', pollingGroupId:197675118 });
 const { updates, snippets } = vk;
 
 updates.startPolling();
 updates.on('message', async (message) => {
 	if(Number(message.senderId) <= 0) return;
-	if(/\[club202327178\|(.*)\]/i.test(message.text)) message.text = message.text.replace(/\[club202327178\|(.*)\]/ig, '').trim();
+	if(/\[club197675118\|(.*)\]/i.test(message.text)) message.text = message.text.replace(/\[club197675118\|(.*)\]/ig, '').trim();
 
 	if(!users.find(x=> x.id === message.senderId))
 	{
@@ -4891,24 +4891,24 @@ cmd.on(/^(?:дайвинг|плавать|🎏 дайвинг|🎣 плават�
 			if(prize === 1)
 			{
 				message.user.balance += denyushka;
-				bot(`Вы напугали 10 🎃 детей и за это вы получили 💰: ${utils.sp(denyushka)}$`, message.sendSticker(3362),{attachment: 'photo-202327178_457239858'});
+				bot(`Вы напугали 10 🎃 детей и за это вы получили 💰: ${utils.sp(denyushka)}$`, message.sendSticker(3362),{attachment: 'photo-197675118_457239858'});
 			}
 		
 			if(prize === 2)
 			{
 				message.user.balance += denyushka;
-				bot(`Вы собрали 150 конфет и за это вы получили 💰  ${utils.sp(denyushka)}$`,{attachment: 'photo-202327178_457239856'});
+				bot(`Вы собрали 150 конфет и за это вы получили 💰  ${utils.sp(denyushka)}$`,{attachment: 'photo-197675118_457239856'});
 			}
 		
 			if(prize === 3)
 			{
 				message.user.balance -= 100000;
-				bot(`Вам приснился Фредди Крюгер и украл у вас 100.000`,{attachment: 'photo-202327178_457239857'});
+				bot(`Вам приснился Фредди Крюгер и украл у вас 100.000`,{attachment: 'photo-197675118_457239857'});
 			}
 		
 			if(prize === 4)
 			{
-				bot(`вы решили поверить в себя, и напали на Джейсона, за это вы ничего не получили`,{attachment: 'photo-202327178_457239859'});
+				bot(`вы решили поверить в себя, и напали на Джейсона, за это вы ничего не получили`,{attachment: 'photo-197675118_457239859'});
 			}
 		
 		});
